@@ -15,7 +15,7 @@ body {
 }
 
 .letnie-wrapper {
-    @apply  mx-auto flex flex-col-reverse xl:flex-row items-start xl:max-h-screen xl:h-screen xl:overflow-hidden xl:transform xl:scale-95 2xl:scale-100;
+    @apply  mx-auto flex flex-col-reverse xl:flex-row items-start xl:w-screen xl:h-screen overflow-x-hidden xl:transform xl:scale-95 2xl:scale-100;
 
 
     .letnie-col-1,
