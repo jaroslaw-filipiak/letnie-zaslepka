@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
   
     background-image: url('/images/bg.jpg') ;
@@ -14,11 +13,35 @@ body {
    
 }
 
+
+.reveal {
+    @media (max-width: 1280px) { 
+        overflow-y: scroll !important;
+     }
+   
+}
+
 .letnie-wrapper {
-    @apply  mx-auto flex flex-col-reverse xl:flex-row items-start xl:w-screen xl:h-screen overflow-x-hidden xl:transform xl:scale-95 2xl:scale-100;
+    
 
+   .slides {
 
-    .letnie-col-1,
+    .view {
+
+        display: flex !important;
+        flex-direction: column-reverse !important;
+      
+
+        @media (min-width: 1280px) { 
+           
+            flex-direction: row !important;
+            align-items:  stretch !important;
+            justify-content: center !important;
+         }
+
+    
+
+        .letnie-col-1,
     .letnie-col-2
      {
         @apply flex flex-col items-center justify-start w-full sm:justify-center 2xl:flex-grow xl:h-screen ;
@@ -26,6 +49,16 @@ body {
 
     .letnie-col-1 {
         @apply p-8 xl:p-0  pt-24 xl:pt-0;
+    }
+
+        
+    .letnie-col-2 {
+        @apply xl:bg-right bg-no-repeat relative mx-auto ;
+       
+        .footer-right-img {
+            @apply hidden xl:block 2xl:relative 2xl:-right-10  transform xl:scale-75 2xl:scale-100 z-20 relative;
+            transform-origin: top;
+        }
     }
 
     .letnie-col-2 {
@@ -47,18 +80,8 @@ body {
         
     }
 
-
-    .letnie-col-2 {
-        @apply xl:bg-right bg-no-repeat relative mx-auto ;
-       
-        .footer-right-img {
-            @apply hidden xl:block 2xl:relative 2xl:-right-10  transform xl:scale-75 2xl:scale-100 z-20 relative;
-            transform-origin: top;
-        }
-    }
-
     .buttons {
-        @apply flex mt-8 mb-8 xl:-mt-4 xl:mb-5  2xl:-mt-0  2xl:mb-4 transform xl:scale-75 2xl:scale-100;
+        @apply flex xl:flex-row items-center justify-center mt-8 mb-8 xl:-mt-4 xl:mb-5  2xl:-mt-0  2xl:mb-4 transform xl:scale-75 2xl:scale-100 mx-auto;
 
         a {
             @apply block mr-3 ml-3 cursor-pointer hover:opacity-90;
@@ -66,12 +89,12 @@ body {
     }
 
     .logo-main {
-     @apply  w-72 xl:w-full mx-auto mb-6 xl:mb-0 2xl:mb-7 transform xl:scale-50 2xl:scale-90 xl:-mt-24 2xl:-mt-0 xl:relative top-6 2xl:top-0;
+     @apply  w-72  mx-auto mb-6 xl:mb-0 2xl:mb-0 transform xl:w-2/3 xl:scale-50  xl:-mt-24 2xl:-mt-0 xl:relative top-6 2xl:top-0;
      transform-origin: center;
     }
 
     .cities {
-        @apply 2xl:mb-4 transform scale-75 2xl:scale-100 xl:-mt-10 2xl:-mt-10 ;
+        @apply  transform scale-75 2xl:scale-75 xl:w-2/3 mx-auto  ;
         transform-origin: top;
     }
 
@@ -86,11 +109,11 @@ body {
     }
 
     .black-btn {
-        @apply 2xl:mb-4 cursor-pointer hover:opacity-90 transform scale-75 2xl:scale-100 xl:-mt-4 2xl:-mt-0;
+        @apply cursor-pointer hover:opacity-90 transform xl:w-1/3 mx-auto scale-75 ;
         transform-origin: top;
     }
     .logo-black {
-        @apply w-72 xl:w-4/5 mx-auto transform xl:-mt-16 2xl:-mt-0 xl:scale-50 2xl:scale-90;
+        @apply w-72 xl:w-2/3 xl:scale-50 mx-auto transform xl:-mt-16 2xl:-mt-0  2xl:scale-50;
         transform-origin: bottom;
     }
   
@@ -103,14 +126,14 @@ body {
     }
 
     .lineup {
-        @apply mt-8 xl:mt-0 transform xl:scale-75 2xl:scale-90;
+        @apply mt-8 xl:mt-0 transform xl:scale-75 ;
     }
 
     .img-over {
         @apply absolute -bottom-12;
     }
-
-
-
+    }
+       
+   }
    
 }

@@ -12,5 +12,8 @@
     "sass": "^1.38.0",
     "tailwindcss": "^2.2.7",
     "vite": "^2.4.4"
+  },
+  "dependencies": {
+    "reveal.js": "^4.1.3"
   }
 }
