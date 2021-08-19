@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --slide-width: 100vw !important;
+    --slide-height: 100vh !important;
+}
+
 body {
   
     background-image: url('/images/bg.jpg') ;
@@ -18,6 +23,18 @@ body {
     @media (max-width: 1280px) { 
         overflow-y: scroll !important;
      }
+   
+}
+
+.reveal.center, .reveal.center .slides, .reveal.center .slides section {
+   
+    @media (min-width: 1280px) { 
+        max-height: 100vh;
+        padding: 0 !important;
+        margin: 0 !important;
+     }
+   
+    
    
 }
 
@@ -44,16 +61,25 @@ body {
         .letnie-col-1,
     .letnie-col-2
      {
-        @apply flex flex-col items-center justify-start w-full sm:justify-center 2xl:flex-grow xl:h-screen ;
+        @apply flex flex-col items-center justify-start w-full sm:justify-center 2xl:flex-grow xl:h-screen xl:relative;
     }
 
     .letnie-col-1 {
-        @apply p-8 xl:p-0  pt-24 xl:pt-0;
+        @apply p-8 xl:p-0  pt-24 xl:pt-0 ;
+        @media (min-width: 1280px) { 
+           
+         top: -4vh
+         }
     }
 
         
     .letnie-col-2 {
         @apply xl:bg-right bg-no-repeat relative mx-auto ;
+
+        @media (min-width: 1280px) { 
+           
+            top: -4vh
+            }
        
         .footer-right-img {
             @apply hidden xl:block 2xl:relative 2xl:-right-10  transform xl:scale-75 2xl:scale-100 z-20 relative;

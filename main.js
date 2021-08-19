@@ -15,8 +15,7 @@ window.addEventListener('resize', () => {
             plugins: [ Markdown ]
          })
          deck.initialize({
-             width: '100%',
-             height: '100%',
+           
              minScale: 0.2,
              maxScale: 1.0,
              margin: 0.01,
@@ -30,14 +29,15 @@ window.addEventListener('resize', () => {
 })
 
 window.addEventListener('DOMContentLoaded', () => {
+
+    let intViewportWidth =  document.documentElement.clientWidth;
    
     if(intViewportWidth > 1280) {
         let deck = new Reveal({
             plugins: [ Markdown ]
          })
          deck.initialize({
-             width: '100%',
-             height: '100%',
+           
              minScale: 0.2,
              maxScale: 1.0,
              margin: 0.01,
